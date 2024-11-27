@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "𝗠𝗔𝗧𝗘𝗢 𝗖𝗛𝗔𝗧𝗕𝗢𝗧";
+const doNotDelete = "𝗭𝗘𝗣𝗛𝗬𝗥𝗨𝗦 𝗕𝗢𝗧";
 
 function formatFont(text) {
   const fontMapping = {
@@ -27,7 +27,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.20",
-    author: "Raphael Scholar × Gerald max",
+    author: "unknown",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -49,7 +49,7 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = `❀━━━━━━━━━━━━━━❀\n【 𝗠𝗔𝗧𝗘𝗢 𝗖𝗛𝗔𝗧𝗕𝗢𝗧 】\n❀━━━━━━━━━━━━━━❀\n`;
+      let msg = `࿇══━━━━✥◈✥━━━━══࿇\n〕〕⧽⧽ 𝗞𝗬𝗟𝗘'𝗦 𝗕𝗢𝗧 ⧼⧼〔〔\n࿇══━━━━✥◈✥━━━━══࿇\n`;
 
       for (const [name, value] of commands) {
         if (value.config.role > role) continue;
@@ -67,21 +67,21 @@ module.exports = {
         const names = categories[category].commands.sort();
         for (let i = 0; i < names.length; i++) {
           const formattedCmd = formatFonts(names[i]);
-          msg += `│☾ ${formattedCmd}\n`;
+          msg += `│𓃵 ${formattedCmd}\n`;
         }
 
         msg += `╰─────────────❍\n`;
       });
 
       const totalCommands = commands.size;
-      msg += `╭──☉【 ☘ | 𝗘𝗡𝗝𝗢𝗬 】\n`;
+      msg += `╭──☉【 ≛ | 𝗘𝗡𝗝𝗢𝗬 】\n`;
       msg += `│» 𝑪𝒖𝒓𝒓𝒆𝒏𝒕𝒍𝒚, 𝒕𝒉𝒆 𝒃𝒐𝒕 𝒉𝒂𝒔 \n│『 ${totalCommands} 』𝑪𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒕𝒉𝒂𝒕 𝒄𝒂𝒏\n│𝒃𝒆 𝒖𝒔𝒆𝒅\n`;
       msg += `│» 𝚃𝚢𝚙𝚎 [ ${prefix}help ] 𝘤𝘮𝘥_𝘯𝘢𝘮𝘦\n│𝚃𝚘 𝚟𝚒𝚎𝚠 𝚍𝚎𝚝𝚊𝚒𝚕𝚜\n│𝚘𝚏 𝚑𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎\n`;
       msg += `│» 𝗧𝗬𝗣𝗘 [ ${prefix}supportgc ] \n│to get added\n│to our support group\n`;
-      msg += `╰─────────────❃\n`;
-      msg += `╭────────────❃\n`;
-      msg += `│⛁ ♫ ⛁ ♫ ⛁\n│⏮  ${doNotDelete}  ⏭ \n│♡♥♡♥♡♥♡\n`;
-      msg += `╰──────────❃`;
+      msg += `╰─────────────❍\n`;
+      msg += `╭────────────❍\n`;
+      msg += `│꥟❖❖❖\n│⏮  ${doNotDelete}  ⏭ \n│❖❖❖꥟\n`;
+      msg += `╰──────────❍`;
 
       await message.reply({ body: msg });
     } else {
